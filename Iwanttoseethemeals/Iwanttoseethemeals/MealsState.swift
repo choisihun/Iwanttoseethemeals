@@ -10,13 +10,9 @@ import Alamofire
 
 class MealsState: ObservableObject {
     @Published var date: String = ""
-    
     @Published var breakfast: String = ""
-    
     @Published var lunch: String = ""
-    
     @Published var dinner: String = ""
-    
     @Published var showing: Bool = false
     
     func getMeals() {
@@ -50,7 +46,7 @@ class MealsState: ObservableObject {
                             self.dinner = "저녁이 없습니다."
                         }
                     } else {
-                        print("야 이거 뭔가 좀 이상한데")
+                        print("디코딩 오류여")
                     }
                 case.failure(let error):
                     print(error.localizedDescription)
